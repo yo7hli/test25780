@@ -53,7 +53,7 @@ class Test25780 extends Module {
           $trace .= sprintf("%s:%s\n", $t['file'], $t['line']);
         }
 
-        $out = sprintf("Call %d\n=======%s\n",$this->call, $trace);
+        $out = sprintf("Call %d\n=======\n%s\n",$this->call, $trace);
         $fh = fopen($this->output_file,'a');
         fwrite($fh, $out);
         fclose($fh);
